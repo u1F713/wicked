@@ -15,6 +15,7 @@ specifiers:
   prettier: ^2.6.2
   sass: ^1.52.1
   solid-js: ^1.4.3
+  solid-styled-components: ^0.28.1
   typescript: ^4.7.2
   vite: ^2.9.9
   vite-plugin-solid: ^2.2.6
@@ -36,6 +37,7 @@ devDependencies:
   eslint-plugin-promise: 6.0.0_eslint@8.16.0
   prettier: 2.6.2
   sass: 1.52.1
+  solid-styled-components: 0.28.1_solid-js@1.4.3
   typescript: 4.7.2
   vite: 2.9.9_sass@1.52.1
   vite-plugin-solid: 2.2.6_sass@1.52.1
@@ -868,6 +870,10 @@ packages:
       which: 2.0.2
     dev: true
 
+  /csstype/3.1.0:
+    resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
+    dev: true
+
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -1697,6 +1703,14 @@ packages:
       slash: 3.0.0
     dev: true
 
+  /goober/2.1.9_csstype@3.1.0:
+    resolution: {integrity: sha512-PAtnJbrWtHbfpJUIveG5PJIB6Mc9Kd0gimu9wZwPyA+wQUSeOeA4x4Ug16lyaaUUKZ/G6QEH1xunKOuXP1F4Vw==}
+    peerDependencies:
+      csstype: ^3.0.10
+    dependencies:
+      csstype: 3.1.0
+    dev: true
+
   /has-bigints/1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
     dev: true
@@ -2281,6 +2295,16 @@ packages:
       '@babel/generator': 7.18.2
       '@babel/helper-module-imports': 7.16.7
       '@babel/types': 7.18.2
+      solid-js: 1.4.3
+    dev: true
+
+  /solid-styled-components/0.28.1_solid-js@1.4.3:
+    resolution: {integrity: sha512-cXq6gaJk2/WWvNctibbtCXxTTj6vljboQFgTl5vVRcx7SMkvBFqtBeyc8nKVaX0fXmaHeDIb6kgt8ipiLKQvLQ==}
+    peerDependencies:
+      solid-js: ^1.4.1
+    dependencies:
+      csstype: 3.1.0
+      goober: 2.1.9_csstype@3.1.0
       solid-js: 1.4.3
     dev: true
 

@@ -1,4 +1,5 @@
 import { Component, JSX } from 'solid-js'
+import { ContainerStyled } from './Container.styled'
 
 interface ContainerProps {
   children: JSX.Element
@@ -6,9 +7,9 @@ interface ContainerProps {
 
 const Container: Component<ContainerProps> = ({ children }) => {
   return (
-    <div class="container">
-      <div>{children}</div>
-    </div>
+    <ContainerStyled columnSize={700}>
+      <div class="column">{children}</div>
+    </ContainerStyled>
   )
 }
 export default Container

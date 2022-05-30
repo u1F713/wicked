@@ -30,6 +30,7 @@
     "vite-plugin-solid": "^2.2.6"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
     "solid-js": "^1.4.3"
   }
 }

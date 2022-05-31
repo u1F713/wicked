@@ -1,12 +1,18 @@
-import path from 'path'
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import solidPlugin from 'vite-plugin-solid'
 
 export default defineConfig({
   plugins: [solidPlugin()],
   root: 'src',
-  publicDir: path.resolve(__dirname, 'public'),
-  build: { target: 'esnext', outDir: path.resolve(__dirname, 'dist') },
+  publicDir: resolve(__dirname, 'public'),
+  build: { target: 'esnext', outDir: resolve(__dirname, 'dist') },
+  resolve: {
+    alias: {
+      '~': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/view/components')
+    }
+  },
   server: {
     port: 4444
   }

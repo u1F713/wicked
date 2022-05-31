@@ -1,4 +1,4 @@
 import { render } from 'solid-js/web'
-import App from './view/App'
+import App from './App'
 
 render(() => <App />, document.querySelector('#root') ?? document.body)

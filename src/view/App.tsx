@@ -1,5 +1,5 @@
 import { Component } from 'solid-js'
-import Container from '@components/Container'
+import Container from './components/Container'
 import './styles/global.sass'
 
 const App: Component = () => {

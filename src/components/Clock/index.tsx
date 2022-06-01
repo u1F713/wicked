@@ -4,8 +4,6 @@ import { ClockStyled } from './Clock.styled'
 
 const Clock: Component = () => {
   const { getTime } = useDateTime()
-  console.log(getTime)
-
   return <ClockStyled>{getTime()}</ClockStyled>
 }
 export default Clock

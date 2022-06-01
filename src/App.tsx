@@ -1,4 +1,5 @@
 import { Component, For, onMount } from 'solid-js'
+import Card from './components/Card'
 import Clock from './components/Clock'
 import Container from './components/Container'
 import { store, addPage } from './hooks/store'
@@ -11,7 +12,7 @@ const App: Component = () => {
   return (
     <Container>
       <Clock />
-      <For each={store}>{(item) => <span>{item.name}</span>}</For>
+      <For each={store}>{(item) => <Card page={item} />}</For>
     </Container>
   )
 }

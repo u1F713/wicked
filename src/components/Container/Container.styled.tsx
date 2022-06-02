@@ -8,7 +8,7 @@ export const ContainerStyled = styled('div')(
   (props: StylesProps) => `
     display: flex;
     justify-content: center;
-    align-items: center;
+    place-items: center;
     min-height: 100vh;
 
     .column {

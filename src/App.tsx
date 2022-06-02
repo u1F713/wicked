@@ -1,18 +1,17 @@
-import { Component, For, onMount } from 'solid-js'
-import Card from './components/Card'
-import Clock from './components/Clock'
+import { Component, onCleanup, onMount } from 'solid-js'
 import Container from './components/Container'
-import { store, addPage } from './hooks/store'
+import Layout from './components/Layout'
+import { store, addPage, cleanStore } from './hooks/store'
 import './styles/global.sass'
 
 const App: Component = () => {
   onMount(() => {
     addPage({ name: 'repo', link: new URL('https://github.com/waterssh/wicked') })
   })
+  onCleanup(cleanStore)
   return (
     <Container>
-      <Clock />
-      <For each={store}>{(item) => <Card page={item} />}</For>
+      <Layout img="" cards={store} />
     </Container>
   )
 }

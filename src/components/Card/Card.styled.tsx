@@ -5,3 +5,8 @@ export const CardStyled = styled('section')`
   border-radius: 5px;
   padding: 0.5em;
 `
+export const CardGrid = styled('section')`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+`

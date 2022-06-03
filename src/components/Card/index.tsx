@@ -9,7 +9,12 @@ interface CardProps {
 const Card: Component<CardProps> = ({ page }) => {
   return (
     <CardStyled>
-      <a href={page.link.toString()}>{page.name}</a>
+      <a href={page.link.toString()}>
+        <figure>
+          <img src="https://github.com/favicon.ico" />
+        </figure>
+        <span>{page.name}</span>
+      </a>
     </CardStyled>
   )
 }

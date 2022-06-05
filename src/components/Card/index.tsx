@@ -1,20 +1,16 @@
-import { Component } from 'solid-js'
+import { Component, JSXElement } from 'solid-js'
 import { IPage } from '~/interfaces/page'
 import { CardStyled } from './Card.styled'
 
 interface CardProps {
   page: IPage
+  children: JSXElement
 }
 
-const Card: Component<CardProps> = ({ page }) => {
+const Card: Component<CardProps> = ({ page, children }) => {
   return (
     <CardStyled>
-      <a href={page.link.toString()}>
-        <figure>
-          <img src="https://github.com/favicon.ico" />
-        </figure>
-        <span>{page.name}</span>
-      </a>
+      <a href={page.link.toString()}>{children}</a>
     </CardStyled>
   )
 }

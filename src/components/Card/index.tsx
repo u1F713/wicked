@@ -1,16 +1,15 @@
 import { Component, JSXElement } from 'solid-js'
-import { IPage } from '~/interfaces/page'
-import { CardStyled } from './Card.styled'
+import { ActionStyled, CardStyled } from './Card.styled'
 
 interface CardProps {
-  page: IPage
   children: JSXElement
+  actionOnClick?: () => void
 }
 
-const Card: Component<CardProps> = ({ page, children }) => {
+const Card: Component<CardProps> = ({ children, actionOnClick }) => {
   return (
     <CardStyled>
-      <a href={page.link.toString()}>{children}</a>
+      <ActionStyled onClick={actionOnClick}>{children}</ActionStyled>
     </CardStyled>
   )
 }

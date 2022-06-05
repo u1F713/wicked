@@ -19,7 +19,7 @@ const Layout: Component<LayoutProps> = ({ cards }) => {
       <CardGrid>
         <For each={cards}>
           {(item) => (
-            <Card page={item}>
+            <Card>
               <FigureStyled>
                 <img src="https://github.com/favicon.ico" />
               </FigureStyled>

@@ -8,6 +8,11 @@ export const CardStyled = styled('section')`
   padding: 0.4em;
   border-radius: 5px;
 
+  span {
+    font-size: 1.4em;
+    color: #fbfbfe;
+  }
+
   &:hover {
     background-color: #474d5890;
   }
@@ -28,6 +33,10 @@ export const FigureStyled = styled('figure')`
   img {
     height: 50%;
   }
+`
+
+export const ActionStyled = styled('button')`
+  cursor: pointer;
 `
 
 export const CardGrid = styled('section')`

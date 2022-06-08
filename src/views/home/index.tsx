@@ -3,6 +3,7 @@ import { store } from '~/hooks/store'
 import Layout from './components/Layout'
 import Clock from '@components/Clock'
 import SiteComponent from '@components/Site'
+import { Container } from '~/components/Container/Container.component'
 
 const HomePage: Component = () => {
   return (
@@ -10,10 +11,10 @@ const HomePage: Component = () => {
       <section>
         <Clock />
       </section>
-      <section>
+      <Container>
         <h3>Favorite</h3>
         <For each={store}>{(item: any) => <SiteComponent name={item.name} address={item.link} />}</For>
-      </section>
+      </Container>
     </Layout>
   )
 }

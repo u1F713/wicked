@@ -1,5 +1,5 @@
 import { Component, JSXElement } from 'solid-js'
-import { CardContainer } from './Card.styled'
+import { CardContainer, Icon } from './Card.styled'
 
 interface CardProps {
   children: JSXElement
@@ -9,7 +9,9 @@ interface CardProps {
 export const CardComponent: Component<CardProps> = ({ children, actionOnClick }) => {
   return (
     <article onclick={actionOnClick}>
-      <CardContainer>{children}</CardContainer>
+      <CardContainer>
+        <Icon>{children}</Icon>
+      </CardContainer>
     </article>
   )
 }

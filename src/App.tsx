@@ -1,7 +1,7 @@
 import { Component, onCleanup, onMount } from 'solid-js'
 import { addPage, cleanStore } from './hooks/store'
+import IndexRoute from './views/routes'
 import '@styles/main.sass'
-import IndexRoute from './views'
 
 const App: Component = () => {
   onMount(() => {

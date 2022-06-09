@@ -12,7 +12,7 @@ export const SiteComponent: Component<ComponentProps> = ({ name, address }) => {
 
   return (
     <SiteLayout>
-      <Card>
+      <Card actionOnClick={() => location.replace(address)}>
         <img src={`${origin}/favicon.ico`} alt={name} />
       </Card>
       <Name>{name}</Name>

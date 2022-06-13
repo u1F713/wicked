@@ -5,6 +5,6 @@ interface ContainerProps {
   children: JSXElement
 }
 
-export const Container: Component<ContainerProps> = ({ children }) => {
+export const ContainerCompont: Component<ContainerProps> = ({ children }) => {
   return <Wrapper>{children}</Wrapper>
 }

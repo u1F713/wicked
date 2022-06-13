@@ -1,10 +1,10 @@
 import { Component, For, createSignal } from 'solid-js'
 import { store } from '~/hooks/store'
+import { FontDisplay } from './components/Layout/Layout.styled'
+import Container from '@components/Container'
 import Layout from './components/Layout'
 import Clock from '@components/Clock'
 import SiteComponent from '@components/Site'
-import { Container } from '~/components/Container/Container.component'
-import { FontDisplay } from './components/Layout/Layout.styled'
 
 const HomePage: Component = () => {
   const [getBackground, setBackground] = createSignal<string>('')

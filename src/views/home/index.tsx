@@ -4,6 +4,7 @@ import Layout from './components/Layout'
 import Clock from '@components/Clock'
 import SiteComponent from '@components/Site'
 import { Container } from '~/components/Container/Container.component'
+import { FontDisplay } from './components/Layout/Layout.styled'
 
 const HomePage: Component = () => {
   const [getBackground, setBackground] = createSignal<string>('')
@@ -15,7 +16,7 @@ const HomePage: Component = () => {
         <Clock />
       </section>
       <Container>
-        <h3>Favorite</h3>
+        <FontDisplay>Favorite</FontDisplay>
         <For each={store}>{(item: any) => <SiteComponent name={item.name} address={item.link} />}</For>
       </Container>
     </Layout>

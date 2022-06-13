@@ -13,3 +13,8 @@ export const LayoutGrid = styled('div')(
     background-size: cover;
   `
 )
+
+export const FontDisplay = styled('h3')`
+  font-size: 2.1em;
+  font-weight: bold;
+`

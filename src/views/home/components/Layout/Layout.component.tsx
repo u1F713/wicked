@@ -1,4 +1,5 @@
 import { Component, JSXElement } from 'solid-js'
+import Background from '~/components/Background'
 import { LayoutGrid } from './Layout.styled'
 
 interface LayoutProps {
@@ -7,5 +8,10 @@ interface LayoutProps {
 }
 
 export const LayoutComponent: Component<LayoutProps> = ({ children, background }) => {
-  return <LayoutGrid background={background}>{children}</LayoutGrid>
+  return (
+    <LayoutGrid>
+      <Background image={background} />
+      {children}
+    </LayoutGrid>
+  )
 }

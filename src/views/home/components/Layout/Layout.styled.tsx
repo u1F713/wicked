@@ -17,3 +17,8 @@ export const FontDisplay = styled('h3')`
 export const Section = styled('section')`
   min-width: 80%;
 `
+export const CardList = styled('section')`
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2em;
+`

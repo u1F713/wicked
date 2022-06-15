@@ -1,10 +1,11 @@
 import { Component, For, createSignal } from 'solid-js'
 import { store } from '~/hooks/store'
-import { FontDisplay } from './components/Layout/Layout.styled'
+import { CardList, FontDisplay } from './components/Layout/Layout.styled'
 import Container from '@components/Container'
 import Layout from './components/Layout'
 import Clock from '@components/Clock'
 import SiteComponent from '@components/Site'
+import AddSiteBtn from '@components/AddSiteBtn'
 
 const HomePage: Component = () => {
   const [getBackground, setBackground] = createSignal<string>('')
@@ -17,7 +18,10 @@ const HomePage: Component = () => {
       </section>
       <Container>
         <FontDisplay>Favorite</FontDisplay>
-        <For each={store}>{(item: any) => <SiteComponent name={item.name} address={item.link} />}</For>
+        <CardList>
+          <For each={store}>{(item: any) => <SiteComponent name={item.name} address={item.link} />}</For>
+          <AddSiteBtn />
+        </CardList>
       </Container>
     </Layout>
   )

@@ -1,9 +1,3 @@
-import { Component } from 'solid-js'
-import { ClockStyled } from './Clock.styled'
-import useDateTime from '~/hooks/dateTime'
+import { ClockComponent as Clock } from './Clock.component'
 
-const Clock: Component = () => {
-  const { getTime } = useDateTime()
-  return <ClockStyled>{getTime()}</ClockStyled>
-}
 export default Clock

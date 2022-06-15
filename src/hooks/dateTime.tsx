@@ -1,13 +1,11 @@
 import { createSignal } from 'solid-js'
 
+const getDate = (): string => {
+  const date = new Date()
+  return `${date.getHours()}:${date.getMinutes()}`
+}
+
 const useDateTime = (): any => {
-  const getDate = (): string => {
-    return new Date().toLocaleDateString(navigator.language, {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: '2-digit'
-    })
-  }
   const [getTime, setTime] = createSignal<string>(getDate())
   setInterval(() => setTime(getDate()), 500)
 

@@ -6,6 +6,7 @@ import Layout from './components/Layout'
 import Clock from '@components/Clock'
 import SiteComponent from '@components/Site'
 import AddSiteBtn from '@components/AddSiteBtn'
+import AddSiteModal from '@components/AddSiteModal'
 
 const HomePage: Component = () => {
   const [getBackground, setBackground] = createSignal<string>('')
@@ -23,6 +24,7 @@ const HomePage: Component = () => {
           <AddSiteBtn />
         </CardList>
       </Container>
+      <AddSiteModal visibility={false} />
     </Layout>
   )
 }
